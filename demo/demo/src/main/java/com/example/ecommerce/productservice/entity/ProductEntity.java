@@ -1,20 +1,17 @@
 package com.example.ecommerce.productservice.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "products")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductEntity {
@@ -23,18 +20,18 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "sku", unique = true)
     private String sku;
 
-    @Column(nullable = false)
+    @Column(name = "import_price")
     private BigDecimal importPrice;
 
-    @Column(nullable = false)
+    @Column(name = "sell_price")
     private BigDecimal sellPrice;
 
-    @Column(nullable = false)
+    @Column(name = "stock_quantity")
     private Integer stockQuantity;
 }

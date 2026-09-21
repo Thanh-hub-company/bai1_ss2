@@ -28,7 +28,7 @@ class ProductControllerTest {
 
     @Test
     void getProductDetailReturnsOnlyPublicProductFields() throws Exception {
-        when(productService.getProductDetail(1L))
+        when(productService.getProductById(1L))
                 .thenReturn(new ProductResponseDTO(1L, "Laptop Gaming", new BigDecimal("18990000")));
 
         mockMvc.perform(get("/api/v1/products/1").accept(MediaType.APPLICATION_JSON))
