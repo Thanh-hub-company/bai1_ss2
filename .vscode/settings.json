@@ -55,5 +55,6 @@
             "database": "user_db",
             "username": "postgres"
         }
-    ]
+    ],
+    "mssql.objectExplorer.collapseConnectionGroupsOnStartup": true
 }
