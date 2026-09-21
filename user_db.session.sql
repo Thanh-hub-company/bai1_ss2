@@ -1,4 +1,4 @@
--- Dang nhap vao database hien tai cua ban, sau do tao Schema:
+﻿-- Dang nhap vao database hien tai cua ban, sau do tao Schema:
 CREATE SCHEMA user_schema;
 CREATE SCHEMA inventory_schema;
 
